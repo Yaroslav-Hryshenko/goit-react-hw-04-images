@@ -37,7 +37,7 @@ export const App = () => {
         }
 
         setImg(prevImages =>
-          page === 1 ? images.hits : [...prevImages, ...images.hits]
+          [...prevImages, ...images.hits]
         );
         setTotalPages(Math.floor(images.totalHits / 12));
       } catch (error) {
